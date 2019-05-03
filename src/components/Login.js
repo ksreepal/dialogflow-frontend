@@ -89,7 +89,8 @@ class Login extends Component {
             const state = urlParams.get('state')
             const scope = urlParams.get('scope')
             const response_type = urlParams.get('response_type')
-
+ 	
+	    console.log('After input request from google....');
 
 			this.Auth.login(this.state.email,this.state.password)
 				.then(res =>{
@@ -99,6 +100,7 @@ class Login extends Component {
 					alert(err);
 				})
             var access_token = Math.random().toString(36).substring(10) + '_SRI_testACt1234556';
+	    console.log('access token-> ', +access_token);
             var redirectToGoogle = 'https://oauth-redirect.googleusercontent.com/r/testsignin-bc22d#access_token=' + access_token + '&token_type=bearer&state=' + state + '&name=Srinivas&empId=300214'
             console.log('redirect_uri params...' + redirectToGoogle);
             /*fetch(redirectToGoogle, {mode: 'cors'})
