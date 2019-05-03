@@ -99,9 +99,11 @@ class Login extends Component {
 				.catch(err =>{
 					alert(err);
 				})
+ 	    
+	    console.log('After login request...');
             var access_token = Math.random().toString(36).substring(10) + '_SRI_testACt1234556';
-	    console.log('access token-> ', +access_token);
-            var redirectToGoogle = 'https://oauth-redirect.googleusercontent.com/r/testsignin-bc22d#access_token=' + access_token + '&token_type=bearer&state=' + state + '&name=Srinivas&empId=300214'
+	    console.log('access token : ' +access_token);
+            var redirectToGoogle = 'https://oauth-redirect.googleusercontent.com/r/testsignin-bc22d#access_token=' + access_token + '&token_type=bearer&state=' + state
             console.log('redirect_uri params...' + redirectToGoogle);
             /*fetch(redirectToGoogle, {mode: 'cors'})
                 .then(response =>  response.json())
@@ -113,7 +115,7 @@ class Login extends Component {
                 })
                 .catch(function(error) {
                     console.log(error);
-                });
+                });`	
             */
             window.location.href = redirectToGoogle;
 
