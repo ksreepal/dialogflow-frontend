@@ -103,7 +103,7 @@ class Login extends Component {
 	    console.log('After login request...');
             var access_token = Math.random().toString(36).substring(10) + '_SRI_testACt1234556';
 	    console.log('access token : ' +access_token);
-            var redirectToGoogle = 'https://oauth-redirect.googleusercontent.com/r/testsignin-145ad#access_token=' + access_token + '&token_type=bearer&state=' + state
+            var redirectToGoogle = 'https://oauth-redirect.googleusercontent.com/r/sampletestsigninagent#access_token=' + access_token + '&token_type=bearer&state=' + state
             console.log('redirect_uri params...' + redirectToGoogle);
             /*fetch(redirectToGoogle, {mode: 'cors'})
                 .then(response =>  response.json())
